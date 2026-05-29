@@ -1,15 +1,13 @@
-# Monokai Pro (Community Edition) for [My App](https://my-app.url)
+# Monokai Pro (Community Edition) for [MainWP](https://mainwp.com/)
 
 ## Installation instructions
 
-Clone from Github:
+Download the CSS File and put it in the MainWP Upload Folter
 
-```zsh
-git clone https://github.com/monokai-pro/my-app.git
-```
+../wp-content/uploads/mainwp/themes
 
 ### Activating theme
 
-1. Copy the files
-2. Activate theme
+1. Go to your MainWP Dashboard
+2. Activate the Theme
 3. Enjoy!
