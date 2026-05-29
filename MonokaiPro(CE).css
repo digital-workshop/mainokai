@@ -635,3 +635,9 @@ body.pushable > .pusher {
   
     color: var(--bg-base)!important;
 }
+.ui.selection.visible.dropdown > .text:not(.default) {
+    color: #fff!important;
+}
+.ui.dropdown.selected, .ui.dropdown .menu .selected.item {
+    background: var(--bg-selection)!important;
+}
