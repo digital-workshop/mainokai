@@ -2,7 +2,7 @@
 
 ## Installation instructions
 
-Download the CSS File and put it in the MainWP Upload Folter
+Download the CSS File and put it in the MainWP Upload Folder
 
 ../wp-content/uploads/mainwp/themes/
 
