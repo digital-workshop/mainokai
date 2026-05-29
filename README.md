@@ -1,4 +1,4 @@
-# Monokai Pro (CE) for [My App](https://my-app.url)
+# Monokai Pro (CE) for [MainWP](https://mainwp.com/)
 
 ![Screenshot](screenshot.png)
 
