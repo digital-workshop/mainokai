@@ -4,7 +4,7 @@
 
 ## About this theme
 
-This Monokai Pro Community Edition (CE) theme is maintained by [Digital-Workshop]([https://github.com/contributor](https://github.com/digital-workshop)) and is based on the original [Monokai Pro](https://monokai.pro) theme.
+This Monokai Pro Community Edition (CE) theme is maintained by [Digital-Workshop](https://github.com/contributor) and is based on the original [Monokai Pro](https://monokai.pro) theme.
 
 [Installation instructions](INSTALL.md)
 
