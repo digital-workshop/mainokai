@@ -4,7 +4,7 @@
 
 Download the CSS File and put it in the MainWP Upload Folter
 
-../wp-content/uploads/mainwp/themes
+../wp-content/uploads/mainwp/themes/
 
 ### Activating theme
 
