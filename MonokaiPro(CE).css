@@ -1,0 +1,637 @@
+/*
+ * ============================================================
+ *  Monokai Pro (CE)
+ *  Farben:  Monokai Pro (CE)
+ *  Font:    JetBrains Mono (Google Fonts)
+ * ============================================================
+ */
+
+/* ── JetBrains Mono von Google Fonts ─────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* ── Monokai Pro (CE) Farbpalette ──────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg-base:        #2d2a2e;
+  --bg-surface:     #221f22;
+  --bg-elevated:    #2d2a2e;
+  --bg-hover:       #363238;
+  --bg-selection:   #403e41;
+
+  /* Monokai Pro (CE) Farben */
+  --mk-yellow:      #ffd866;
+  --mk-pink:        #ff6188;
+  --mk-orange:      #fc9867;
+  --mk-green:       #a9dc76;
+  --mk-blue:        #78dce8;
+  --mk-purple:      #ab9df2;
+  --mk-white:       #fcfcfa;
+
+  /* Semantische Farben */
+  --accent:         #a9dc76;
+  --accent-dim:     #7ab54d;
+  --accent-glow:    rgba(169, 220, 118, 0.15);
+  --accent-subtle:  rgba(169, 220, 118, 0.08);
+
+  --border:         #403e41;
+  --border-accent:  #a9dc76;
+
+  --text-primary:   #fcfcfa;
+  --text-secondary: #939293;
+  --text-muted:     #5b595c;
+  --text-accent:    #a9dc76;
+
+  --danger:         #ff6188;
+  --warning:        #ffd866;
+  --info:           #78dce8;
+
+  --radius-sm:      4px;
+  --radius-md:      8px;
+  --radius-lg:      12px;
+
+  --shadow-sm:      0 1px 4px rgba(0,0,0,0.5);
+  --shadow-md:      0 4px 20px rgba(0,0,0,0.6);
+  --shadow-glow:    0 0 20px rgba(169, 220, 118, 0.18);
+
+  /* Font */
+  --font-main:      'JetBrains Mono', 'Courier New', monospace;
+  --font-size:      12px;
+  --line-height:    1.65;
+}
+
+/* ── Global Font ──────────────────────────────────────────── */
+body,
+#wpwrap, #wpcontent, #wpbody, #wpbody-content,
+#adminmenu, #wpadminbar, .mainwp-ui,
+input, select, textarea, button,
+.button, .nav-tab, .postbox,
+.ui.segment, .ui.card, .ui.modal,
+.ui.dropdown, .ui.label,
+table, th, td, p, li, span, a, h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-main) !important;
+  font-size: var(--font-size) !important;
+  line-height: var(--line-height) !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+h1 { font-size: 1.5rem !important; }
+h2 { font-size: 1.25rem !important; }
+h3 { font-size: 1.1rem !important; }
+h4 { font-size: 1rem !important; }
+h1, h2, h3, h4 { font-weight: 700 !important; color: var(--mk-white) !important; }
+
+/* ── Body ─────────────────────────────────────────────────── */
+body,
+#wpwrap, #wpcontent, #wpbody, #wpbody-content {
+  background-color: var(--bg-base) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ── Admin-Menü (Sidebar) ─────────────────────────────────── */
+#adminmenu, #adminmenuback, #adminmenuwrap {
+  background-color: var(--bg-surface) !important;
+  border-right: 1px solid var(--border) !important;
+}
+
+#adminmenu .wp-submenu {
+  background-color: #1a181a !important;
+}
+
+#adminmenu a,
+#adminmenu .wp-menu-name {
+  color: var(--text-secondary) !important;
+  transition: color 0.2s ease;
+}
+
+#adminmenu a:hover,
+#adminmenu li.menu-top:hover > a {
+  color: var(--mk-yellow) !important;
+  background-color: rgba(255, 216, 102, 0.07) !important;
+}
+
+#adminmenu .current > a,
+#adminmenu .wp-has-current-submenu > a {
+  color: var(--mk-green) !important;
+  background-color: rgba(169, 220, 118, 0.1) !important;
+  border-left: 3px solid var(--mk-green) !important;
+}
+
+#adminmenu .wp-menu-image:before {
+  color: var(--text-secondary) !important;
+}
+
+#adminmenu .current .wp-menu-image:before,
+#adminmenu li:hover .wp-menu-image:before {
+  color: var(--mk-green) !important;
+}
+
+#adminmenu .wp-has-current-submenu .wp-submenu .current a {
+  color: var(--mk-green) !important;
+  font-weight: 600;
+}
+
+#adminmenu .wp-submenu a:hover {
+  color: var(--mk-yellow) !important;
+}
+
+/* ── Admin-Bar (Top Bar) ──────────────────────────────────── */
+#wpadminbar {
+  background-color: #1a181a !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+#wpadminbar .ab-item,
+#wpadminbar a.ab-item,
+#wpadminbar .ab-label {
+  color: var(--text-secondary) !important;
+}
+
+#wpadminbar li:hover > .ab-item,
+#wpadminbar li.hover > .ab-item {
+  background-color: var(--bg-hover) !important;
+  color: var(--mk-yellow) !important;
+}
+
+#wpadminbar .quicklinks .menupop.hover ul li a {
+  background: var(--bg-elevated) !important;
+  color: var(--text-secondary) !important;
+}
+
+#wpadminbar .quicklinks .menupop.hover ul li a:hover {
+  color: var(--mk-yellow) !important;
+  background: var(--bg-hover) !important;
+}
+
+/* ── Content Bereich ──────────────────────────────────────── */
+.mainwp-ui,
+.mainwp-ui-tab-content,
+.mainwp_primary_content_wrap,
+.ui.segment, .ui.segments,
+.ui.card, .ui.cards > .card {
+  background-color: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+/* ── Dashboard Widgets / Postboxen ────────────────────────── */
+.mainwp-widget, .mainwp-widget-box,
+.postbox, .meta-box-sortables .postbox {
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mainwp-widget:hover, .postbox:hover {
+  border-color: var(--mk-green) !important;
+  box-shadow: var(--shadow-glow) !important;
+}
+
+.postbox .postbox-header,
+.postbox .hndle,
+.mainwp-widget .widget-title {
+  background-color: #272529 !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-radius: var(--radius-md) var(--radius-md) 0 0 !important;
+}
+
+.postbox .postbox-header h2,
+.postbox .hndle span {
+  color: var(--mk-yellow) !important;
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+/* ── Tabellen ─────────────────────────────────────────────── */
+.wp-list-table, .mainwp-table, table.dataTable {
+  background-color: transparent !important;
+  border-radius: var(--radius-md) !important;
+  overflow: hidden;
+}
+
+.wp-list-table th, .mainwp-table th, table.dataTable thead th {
+  background-color: #272529 !important;
+  color: var(--mk-blue) !important;
+  border-bottom: 2px solid var(--border) !important;
+  font-size: 0.72rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  font-weight: 700 !important;
+  padding: 10px 14px !important;
+}
+
+.wp-list-table td, .mainwp-table td, table.dataTable tbody td {
+  background-color: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding: 10px 14px !important;
+}
+
+.wp-list-table tr:hover td,
+.mainwp-table tr:hover td,
+table.dataTable tbody tr:hover td {
+  background-color: var(--bg-hover) !important;
+}
+
+.wp-list-table tbody tr:nth-child(even) td {
+  background-color: #2a272b !important;
+}
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.button, .button-secondary, .ui.button {
+  background-color: var(--bg-hover) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-sm) !important;
+  transition: all 0.2s ease !important;
+}
+
+.button:hover, .button-secondary:hover, .ui.button:hover {
+  background-color: var(--bg-selection) !important;
+  border-color: var(--danger) !important;
+  color: var(--danger) !important;
+}
+
+.button-primary, .ui.primary.button, .ui.green.button, .mainwp-btn-green {
+  background-color: rgba(169, 220, 118, 0.15) !important;
+  color: var(--mk-green) !important;
+  border: 1px solid var(--mk-green) !important;
+  font-weight: 700 !important;
+  transition: all 0.2s ease !important;
+}
+
+.button-primary:hover, .ui.primary.button:hover, .ui.green.button:hover {
+  background-color: var(--mk-green) !important;
+  color: #1a181a !important;
+  box-shadow: var(--shadow-glow) !important;
+}
+
+.button-danger, .ui.red.button, .mainwp-btn-red {
+  background-color: rgba(255, 97, 136, 0.12) !important;
+  color: var(--mk-pink) !important;
+  border-color: var(--mk-pink) !important;
+}
+
+.button-danger:hover, .ui.red.button:hover {
+  background-color: var(--mk-pink) !important;
+  color: #1a181a !important;
+}
+
+/* ── Formular-Elemente ────────────────────────────────────── */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+textarea, select,
+.ui.input input, .ui.selection.dropdown {
+  background-color: #272529 !important;
+  color: var(--mk-white) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-sm) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  caret-color: var(--mk-yellow) !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus, select:focus {
+  border-color: var(--mk-blue) !important;
+  box-shadow: 0 0 0 3px rgba(120, 220, 232, 0.15) !important;
+  outline: none !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* ── Semantic UI Dropdown ─────────────────────────────────── */
+.ui.dropdown .menu, .ui.selection.dropdown .menu {
+  background-color: #272529 !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.ui.dropdown .menu > .item,
+.ui.selection.dropdown .menu > .item {
+  color: var(--text-primary) !important;
+  border-top: 1px solid var(--border) !important;
+}
+
+.ui.dropdown .menu > .item:hover,
+.ui.selection.dropdown .menu > .item:hover {
+  background-color: var(--bg-hover) !important;
+  color: var(--mk-yellow) !important;
+}
+
+.ui.selection.active.dropdown,
+.ui.selection.active.dropdown .menu {
+  border-color: var(--mk-blue) !important;
+}
+
+/* ── Tabs ─────────────────────────────────────────────────── */
+.nav-tab-wrapper, .mainwp-tabs {
+  border-bottom: 1px solid var(--border) !important;
+  background: transparent !important;
+}
+
+.nav-tab, .mainwp-tab {
+  background-color: transparent !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid transparent !important;
+  border-bottom: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.nav-tab:hover {
+  color: var(--mk-yellow) !important;
+  background-color: rgba(255, 216, 102, 0.07) !important;
+}
+
+.nav-tab-active, .mainwp-tab.active {
+  background-color: var(--bg-elevated) !important;
+  color: var(--mk-yellow) !important;
+  border-color: var(--border) var(--border) var(--bg-elevated) !important;
+  border-top: 2px solid var(--mk-yellow) !important;
+  font-weight: 700 !important;
+}
+
+/* ── Notices & Alerts ─────────────────────────────────────── */
+.notice, .update-nag, .updated, .error, div.error, div.updated {
+  background-color: var(--bg-elevated) !important;
+  border-left: 4px solid var(--mk-green) !important;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0 !important;
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
+}
+
+.notice-error, div.error  { border-left-color: var(--mk-pink) !important; }
+.notice-warning           { border-left-color: var(--mk-yellow) !important; }
+.notice-info              { border-left-color: var(--mk-blue) !important; }
+.notice-success           { border-left-color: var(--mk-green) !important; }
+
+/* ── Labels & Badges ──────────────────────────────────────── */
+.mainwp-ui .ui.label, .mainwp-badge {
+  border-radius: var(--radius-sm) !important;
+  font-size: 0.58rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+.ui.green.label  { background-color: rgba(169,220,118,0.18) !important; color: var(--mk-green) !important;  border: 1px solid var(--mk-green) !important; padding: 5px!important; }
+.ui.red.label    { background-color: rgba(255,97,136,0.18) !important;  color: var(--mk-pink) !important;   border: 1px solid var(--mk-pink) !important; }
+.ui.yellow.label { background-color: rgba(255,216,102,0.18) !important; color: var(--mk-yellow) !important; border: 1px solid var(--mk-yellow) !important; }
+.ui.blue.label   { background-color: rgba(120,220,232,0.18) !important; color: var(--mk-blue) !important;   border: 1px solid var(--mk-blue) !important; }
+.ui.purple.label { background-color: rgba(171,157,242,0.18) !important; color: var(--mk-purple) !important; border: 1px solid var(--mk-purple) !important; }
+.ui.orange.label { background-color: rgba(252,152,103,0.18) !important; color: var(--mk-orange) !important; border: 1px solid var(--mk-orange) !important; }
+
+/* ── Progress Bar ─────────────────────────────────────────── */
+.ui.progress {
+  background-color: #272529 !important;
+  border-radius: var(--radius-sm) !important;
+  border: 1px solid var(--border) !important;
+}
+.ui.progress > .label {
+  color: var(--mk-blue)!important;
+}
+.ui.progress .bar > .progress {
+  color: var(--bg-base)!important;
+}
+
+.ui.progress .bar        { background-color: var(--mk-green) !important; }
+.ui.green.progress .bar  { background-color: var(--mk-green) !important; }
+.ui.red.progress .bar    { background-color: var(--mk-pink) !important; }
+.ui.yellow.progress .bar { background-color: var(--mk-yellow) !important; }
+.ui.blue.progress .bar   { background-color: var(--mk-blue) !important; }
+
+/* ── Statistik-Karten ─────────────────────────────────────── */
+.mainwp-overview-widget-content .ui.statistic .value,
+.mainwp-stats-value {
+  color: var(--mk-yellow) !important;
+  font-weight: 800 !important;
+  font-size: 2rem !important;
+}
+
+.mainwp-overview-widget-content .ui.statistic .label,
+.mainwp-stats-label {
+  color: var(--text-secondary) !important;
+  font-size: 0.7rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+
+/* ── Update-Zähler ────────────────────────────────────────── */
+.mainwp-updates-number, .awaiting-mod, .update-count, .menu-counter {
+  background-color: var(--mk-pink) !important;
+  color: #1a181a !important;
+  border-radius: 20px !important;
+  padding: 1px 7px !important;
+  font-size: 0.68rem !important;
+  font-weight: 800 !important;
+}
+
+/* ── Suche & DataTables ───────────────────────────────────── */
+.search-box input[type="search"], .dataTables_filter input {
+  background-color: #272529 !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+.dataTables_filter input:focus {
+  border-color: var(--mk-blue) !important;
+  box-shadow: 0 0 0 3px rgba(120, 220, 232, 0.15) !important;
+}
+
+.dataTables_paginate .paginate_button {
+  background-color: var(--bg-hover) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+.dataTables_paginate .paginate_button.current,
+.dataTables_paginate .paginate_button:hover {
+  background-color: rgba(169,220,118,0.15) !important;
+  color: var(--mk-green) !important;
+  border-color: var(--mk-green) !important;
+}
+
+/* ── Modals ───────────────────────────────────────────────── */
+.ui.modal {
+  background-color: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.ui.modal > .header {
+  background-color: #272529 !important;
+  color: var(--mk-yellow) !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
+}
+
+.ui.modal > .content {
+  background-color: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+}
+
+.ui.modal > .actions {
+  background-color: #272529 !important;
+  border-top: 1px solid var(--border) !important;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg) !important;
+}
+
+.ui.dimmer { background-color: rgba(0,0,0,0.8) !important; }
+
+.ui.header {color: var(--mk-green)!important;}
+
+/* ── Tooltips ─────────────────────────────────────────────── */
+.ui.popup {
+  background-color: #272529 !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-md) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+.ui.popup:before {
+  background-color: #272529 !important;
+  box-shadow: -1px -1px 0 0 var(--border) !important;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--mk-purple); }
+
+/* ── Links ────────────────────────────────────────────────── */
+a, .mainwp-ui a {
+  color: var(--mk-blue) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+a:hover, .mainwp-ui a:hover { color: var(--mk-yellow) !important; }
+
+/* ── Divider / hr ─────────────────────────────────────────── */
+.ui.divider, hr { border-color: var(--border) !important; }
+
+/* ── Code-Blöcke ──────────────────────────────────────────── */
+code, pre {
+  background-color: #272529 !important;
+  color: var(--mk-yellow) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-sm) !important;
+  font-family: var(--font-main) !important;
+}
+
+/* ── Text ─────────────────────────────────────────────────── */
+p, li, span, label { color: var(--text-primary) !important; }
+.description, .howto { color: var(--text-secondary) !important; }
+
+
+/* ── Footer ───────────────────────────────────────────────── */
+#wpfooter { border-top: 1px solid var(--border) !important; color: var(--text-muted) !important; }
+#wpfooter a { color: var(--text-secondary) !important; }
+
+/* ── Checkbox & Radio ─────────────────────────────────────── */
+input[type="checkbox"], input[type="radio"] { accent-color: var(--mk-green) !important; }
+
+/* ── Postbox Toggle ───────────────────────────────────────── */
+.postbox .handlediv, .postbox-header .toggle-indicator { color: var(--text-muted) !important; }
+.postbox .handlediv:hover { color: var(--mk-yellow) !important; }
+
+/* ── Sidebar Columns ──────────────────────────────────────── */
+#post-body-content, #postbox-container-1, #postbox-container-2 {
+  background-color: transparent !important;
+}
+
+/* ── Monokai-Syntaxfarben für Status-Werte ────────────────── */
+.mainwp-site-url, .column-url a   { color: var(--mk-blue) !important; }
+.mainwp-version-number            { color: var(--mk-orange) !important; }
+.mainwp-status-ok                 { color: var(--mk-green) !important; }
+.mainwp-status-warning            { color: var(--mk-yellow) !important; }
+.mainwp-status-error              { color: var(--mk-pink) !important; }
+.mainwp-count-number              { color: var(--mk-purple) !important; font-weight: 700 !important; }
+
+
+
+
+
+.ui.table, .ui.grid {
+    background-color: var(--bg-base)!important;
+     
+}
+.ui.table > thead > tr > th {
+    background-color: var(--bg-base);
+    color: var(--accent);
+}
+.ui.table td {
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent-dim);
+
+}
+#mainwp-second-level-navigation .ui.inverted.menu .item {
+    background-color: var(--bg-base);
+}
+#mainwp-first-level-navigation-menu .item .text {
+    font-size: 11px !important;
+}
+
+#mainwp-first-level-navigation-menu a {
+    color: var(--mk-green)!important;
+} 
+body.pushable > .pusher {
+    background: var(--bg-base)!important;
+}
+#mainwp-manage-updates table tr.active {
+    background: var(--bg-base)!important;
+}
+#mainwp-manage-updates table tr.active table th {
+    background: var(--bg-selection)!important;
+    transition: background-color 0.1s ease-in-out;
+}
+#mainwp-manage-updates table tr.active table td {
+    background: var(--bg-selection)!important;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.ui.list .list > .item > .content, .ui.list > .item > .content {
+    color: var(--mk-blue)!important;
+}
+
+.mainwp-ui .ui.vertical.menu {
+    
+    background-color: var(--bg-surface)!important;
+}
+.ui.accordion .title > .dropdown.icon::before {
+  color: var(--mk-green)!important;
+}
+.mainwp-site-menu-item .icon {
+  color: var(--mk-green);
+}
+.ui.warning.message {
+    background-color: var(--danger)!important;
+    color: var(--mk-blue)!important;
+}
+.ui.header .sub.header {
+  color: var(--mk-yellow)!important;
+}
+.ui.checkbox input:checked ~ label::after {
+  
+    color: var(--bg-base)!important;
+}
